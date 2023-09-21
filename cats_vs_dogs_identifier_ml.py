@@ -1,4 +1,4 @@
-import tensorflow.compat.v1 as tf
+import tensorflow as tf
 
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Input, Dense, Conv2D, Flatten, Dropout, MaxPooling2D
@@ -113,8 +113,8 @@ history = model.fit(train_data_gen,
 )
 
 # check accuracy
-acc = history.history['acc']
-val_acc = history.history['val_acc']
+acc = history.history['accuracy']
+val_acc = history.history['val_accuracy']
 
 loss = history.history['loss']
 val_loss = history.history['val_loss']
